@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const fetch = require('node-fetch')
 const express = require('express')
+const cors = require('cors')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -30,7 +31,7 @@ async function fetchData() {
 
 app.get('/', (req, res) => res.status(501).send('Invalid request'))
 
-app.get('/data', (req, res) => {
+app.get('/data', cors(), (req, res) => {
   if(dataFetched) {
     res.download(CSV_PATH)
   } else {
