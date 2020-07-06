@@ -23,7 +23,7 @@ async function fetchData() {
   dataFetched = true
 
   // Check for updates every minute
-  setInterval(() => fetchData(), 1000 * 60)
+  setTimeout(() => fetchData(), 1000 * 60)
 }
 
 // kickoff fetching
