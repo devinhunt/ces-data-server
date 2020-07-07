@@ -8,7 +8,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 const CSV_PATH = path.resolve(__dirname, 'data.csv')
-const sheetId = `1ZhwP0GZTz50myibSaWsMXOVQKx9DQaJO4rN1i58Rrjc` // Should prob be an enviroment var
+const sheetId = `1VM2N68-aAGp8_WWvxtcEvgGf9YBwW3AzXB4Q2xEynLA` // Should prob be an enviroment var
 const sheetsUrlTemplate = docId => `https://docs.google.com/spreadsheets/d/${docId}/pub?output=csv`
 let dataFetched = false
 
@@ -22,8 +22,8 @@ async function fetchData() {
   console.log('Data updated at', new Date().toUTCString())
   dataFetched = true
 
-  // Check for updates every minute
-  setTimeout(() => fetchData(), 1000 * 60)
+  // Check for updates every 2 minutes
+  setTimeout(() => fetchData(), 2 * 60 * 1000)
 }
 
 // kickoff fetching
