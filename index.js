@@ -14,7 +14,7 @@ let dataFetched = false
 
 const dataRoutes = [
   ['default', `1VM2N68-aAGp8_WWvxtcEvgGf9YBwW3AzXB4Q2xEynLA`],
-  //['trend', `1yktDnFm9ToJkLs4GKGuvYSBzmXroQEDfSuoCFcNMcZE`],
+  ['trend', `1gRexnz4AJAIYJ6c5fQXR6ps2EDs7JPHu-CU7-5qE3EI`],
   ['policy', `1iZf2Y0w43WGmqgiCkpwpje4XxRIyDubW6rYKt1UWSS4`]
 ]
 
